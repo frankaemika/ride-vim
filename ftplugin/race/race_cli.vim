@@ -11,8 +11,10 @@ if !exists("g:race_cli_command")
 endif
 
 function! RaceCliUpload()
-    silent !clear
-    execute "!" . g:race_cli_command . " upload " . bufname("%")
+    set errorformat=%EError\ parsing\ .race\ format:\ %m,%Z\	at\ location\ %f:%l:%c,%C\ %#context:,%C,%C%.%#,%C%.%#,%Z%p^
+    cexpr system(g:race_cli_command . " upload " . bufname("%"))
+    caddexpr ''
+    cwindow
 endfunction
 
 function! RaceCliStart()
