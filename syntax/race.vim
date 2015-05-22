@@ -100,5 +100,5 @@ syn match   raceInteger '\d\+'
 syn match   raceFloat '\d+.\d+'
 syn keyword raceOperatorKeywords and or not if then else
 
-syn match   raceComment "\v#.*$"
+syn match   raceComment "\v--.*$"
 
