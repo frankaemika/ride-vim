@@ -68,6 +68,8 @@ hi def link raceComment               Comment
 " we don't highlight function calls in conditions etc. since lua also doesn't
 "hi def link raceFunction Function
 
+syn match   raceComment "\v--.*$"
+
 syn match   raceOperatorConnection "->"
 syn match   raceOperatorFirst "-->"
 syn match   raceOperatorLink "<-" contained
@@ -99,6 +101,4 @@ syn keyword raceBoolean true false
 syn match   raceInteger '\d\+'
 syn match   raceFloat '\d+.\d+'
 syn keyword raceOperatorKeywords and or not if then else
-
-syn match   raceComment "\v--.*$"
 
