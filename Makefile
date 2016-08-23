@@ -1,5 +1,5 @@
 PREFIX=/usr/share/vim/vim74
-DESTDIR=/
+DESTDIR=
 
 install:
 	@mkdir -p $(DESTDIR)$(PREFIX)/syntax/
